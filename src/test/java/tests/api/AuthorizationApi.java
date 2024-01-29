@@ -1,8 +1,11 @@
 package tests.api;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
+import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.response.Response;
 import models.AuthorizationRequestApi;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 import page.ProfilePage;
@@ -23,7 +26,10 @@ public class AuthorizationApi extends BaseTest {
     ProfilePage profData = new ProfilePage();
 
    @Test
+   @Tag("positive_test")
    void successfulLoginWithApiTest() {
+       SelenideLogger.addListener("allure", new AllureSelenide());
+
         authorizationData.setUserName(uData.getLogin());
         authorizationData.setPassword(uData.getPassword());
 

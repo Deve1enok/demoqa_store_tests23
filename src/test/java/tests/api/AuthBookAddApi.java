@@ -1,6 +1,8 @@
 package tests.api;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import data.TestData;
+import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.response.Response;
 import models.AuthorizationRequestApi;
 import models.BookAddedResponseApi;
@@ -25,7 +27,10 @@ public class AuthBookAddApi extends BaseTest {
 
 
     @Test
+    @Tag("positive_test")
     void authAddBookApi(){
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
     step("Отправляем POST запрос", () -> {
 
         String dataBook = "{\"userId\":\"0c0bfe1b-f0d2-4b76-92a8-a31ea8215110\",\"collectionOfIsbns\":[{\"isbn\":\"9781449325862\"}]}";
