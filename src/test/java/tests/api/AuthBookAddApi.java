@@ -4,6 +4,7 @@ import data.TestData;
 import io.restassured.response.Response;
 import models.AuthorizationRequestApi;
 import models.BookAddedResponseApi;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
 import page.ProfilePage;
