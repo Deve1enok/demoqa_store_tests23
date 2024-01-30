@@ -9,7 +9,7 @@ import page.ProfilePage;
 import static com.codeborne.selenide.Selenide.open;
 import static data.ParamUrlApi.USER_LOGIN_UI_URL_PATH;
 
-
+@Tag("store_test")
 public class DemoqaStoreTests extends BaseTest {
     ProfilePage profData = new ProfilePage();
 

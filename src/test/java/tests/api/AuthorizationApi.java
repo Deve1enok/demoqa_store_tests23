@@ -19,7 +19,7 @@ import static io.restassured.http.ContentType.JSON;
 import static specs.ApiSpecification.requestSpec;
 import static specs.ApiSpecification.responseAuthorization200;
 
-@Tag("test_suite")
+@Tag("store_test")
 public class AuthorizationApi extends BaseTest {
 
     AuthorizationRequestApi authorizationData = new AuthorizationRequestApi();
