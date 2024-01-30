@@ -20,6 +20,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
 import static specs.ApiSpecification.*;
 
+@Tag("test_suite")
 public class AuthBookAddApi extends BaseTest {
     ProfilePage profData = new ProfilePage();
     AuthorizationRequestApi authorizationData = new AuthorizationRequestApi();

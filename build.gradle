@@ -51,7 +51,7 @@ tasks.withType(Test) {
 }
 task test_suite(type: Test) {
     useJUnitPlatform {
-        includeTags("habrCareerTests")
+        includeTags("store_test")
     }
 }
 task positive_tests(type: Test) {
