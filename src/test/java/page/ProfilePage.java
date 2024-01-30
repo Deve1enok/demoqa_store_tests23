@@ -6,6 +6,7 @@ import data.TestData;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class ProfilePage {
     TestData uData = new TestData();
@@ -35,6 +36,7 @@ public class ProfilePage {
     public ProfilePage disableContainer() {
         if (blockerContainer.isDisplayed());{
             blockerContainer.click();
+        executeJavaScript("$('.fc-dialog-container').remove()");
         return this;
     }
 }}
