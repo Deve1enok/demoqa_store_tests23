@@ -38,5 +38,10 @@ public class ProfilePage {
             blockerContainer.click();
         executeJavaScript("$('.fc-dialog-container').remove()");
         return this;
+    }}
+    public ProfilePage disableBanner() {
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+        return this;
     }
-}}
+}

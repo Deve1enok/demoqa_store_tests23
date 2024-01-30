@@ -20,6 +20,7 @@ public class DemoqaStoreTests extends BaseTest {
 
         open(USER_LOGIN_UI_URL_PATH);
         profData.disableContainer();
+        profData.disableBanner();
         profData.setLoginAuth();
         profData.setPasswordAuth();
         profData.userNameShouldHaveAuthLoginText();

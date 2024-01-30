@@ -52,6 +52,7 @@ public class AuthorizationApi extends BaseTest {
 
         open(USER_PROFILE_URL_PATH);
         profData.disableContainer();
+        profData.disableBanner();
         profData.userNameShouldHaveAuthLoginText();
 
     }

@@ -84,6 +84,7 @@ public class AuthBookAddApi extends BaseTest {
 
         open(USER_PROFILE_URL_PATH);
         profData.disableContainer();
+        profData.disableBanner();
         profData.profileShouldHaveBookFromTable();
 
 
