@@ -4,8 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import data.TestData;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class ProfilePage {
     TestData uData = new TestData();
@@ -13,6 +13,7 @@ public class ProfilePage {
     private final SelenideElement  bookTableResult = $(".ReactTable");
     private final SelenideElement  userNameLoginField = $("#userName");
     private final SelenideElement  passwordLoginField = $("#password");
+    private final SelenideElement  blockerContainer = $(".fc-consent-root").find(byText("Consent"));
 
 
     public ProfilePage userNameShouldHaveAuthLoginText(){
@@ -31,10 +32,9 @@ public class ProfilePage {
         passwordLoginField.setValue(uData.getPassword()).pressEnter();
         return this;
     }
-    public ProfilePage disableBanner() {
-        executeJavaScript("$('.fc-dialog-container').remove()");
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
+    public ProfilePage disableContainer() {
+        if (blockerContainer.isDisplayed());{
+            blockerContainer.click();
         return this;
     }
-}
+}}

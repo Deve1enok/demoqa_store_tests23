@@ -83,7 +83,7 @@ public class AuthBookAddApi extends BaseTest {
         getWebDriver().manage().addCookie(new Cookie("token", authResponse.path("token")));
 
         open(USER_PROFILE_URL_PATH);
-        profData.disableBanner();
+        profData.disableContainer();
         profData.profileShouldHaveBookFromTable();
 
 

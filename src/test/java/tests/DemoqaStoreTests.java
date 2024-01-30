@@ -19,7 +19,7 @@ public class DemoqaStoreTests extends BaseTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open(USER_LOGIN_UI_URL_PATH);
-        profData.disableBanner();
+        profData.disableContainer();
         profData.setLoginAuth();
         profData.setPasswordAuth();
         profData.userNameShouldHaveAuthLoginText();
