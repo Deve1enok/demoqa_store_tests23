@@ -32,6 +32,7 @@ public class ProfilePage {
         return this;
     }
     public ProfilePage disableBanner() {
+        executeJavaScript("$('.fc-dialog-container').remove()");
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;
