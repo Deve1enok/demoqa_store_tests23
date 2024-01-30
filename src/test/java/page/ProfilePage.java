@@ -36,7 +36,7 @@ public class ProfilePage {
     public ProfilePage disableContainer() {
         if (blockerContainer.isDisplayed());{
             blockerContainer.click();
-        executeJavaScript("$('.fc-dialog-container').remove()");
+        executeJavaScript("$('#app').remove()");
         return this;
     }}
     public ProfilePage disableBanner() {
