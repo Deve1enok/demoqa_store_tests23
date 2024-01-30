@@ -53,14 +53,14 @@ task test_suite(type: Test) {
     useJUnitPlatform {
         includeTags("habrCareerTests")
     }
-    task positive_tests(type: Test) {
-        useJUnitPlatform {
-            includeTags("positive_test")
-        }
-        task negative_tests(type: Test) {
-            useJUnitPlatform {
-                includeTags("negative_test")
-            }
-        }
+}
+task positive_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("positive_test")
+    }
+}
+task negative_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags("negative_test")
     }
 }
