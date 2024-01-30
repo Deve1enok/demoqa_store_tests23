@@ -23,6 +23,7 @@ public class BaseTest {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         RestAssured.baseURI =  System.getProperty("baseUri", "https://demoqa.com");
+        Configuration.pageLoadStrategy = "eager";
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
